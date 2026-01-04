@@ -1,0 +1,235 @@
+/* --- background and body --- */
+body {
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgb(242, 194, 241) 100%);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: rgb(235, 139, 203);
+    padding-top: 70px; /* --- space for sticky header --- */
+}
+
+/* --- Avatar Image --- */
+.avatar {
+    border-radius: 0;
+    border-style: solid;
+    border-color: rgb(235, 139, 203);
+    border-width: 5px;
+    display: block;
+    margin: 20px auto;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Headings --- */
+h1, h2 {
+    text-align: center;
+}
+
+/* --- Header / Navigation --- */
+.site-header {
+    background: rgba(255, 255, 255, 0.8); /* semi-transparent header */
+    padding: 15px 20px;
+    position: sticky; /* sticks to top on scroll */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(235, 139, 203);
+}
+
+/* --- Navigation Links --- */
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* spacing between links */
+}
+
+.navbar .nav-links li a {
+    color: rgb(235, 139, 203);             
+    text-decoration: none;                 
+    font-weight: bold;
+    font-size: 1.3em; 
+    padding: 10px 20px;  
+    border-radius: 12px;                   
+    transition: background 0.3s, color 0.3s; 
+}
+
+.navbar .nav-links li a:hover {
+    background-color: rgb(235, 139, 203);  
+    color: white;                           
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2); 
+}
+
+/* --- About Page White Box --- */
+.about-box {
+    background-color: white;            
+    color: rgb(235, 139, 203);          
+    max-width: 800px;                   
+    margin: 100px auto;                 
+    padding: 40px 30px;                 
+    border-radius: 20px;                
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+}
+
+.about-box h1 {
+    margin-bottom: 20px;
+}
+
+.about-box p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* --- Gallery Page --- */
+.gallery {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* --- Gallery Text & Heading Box --- */
+.gallery-text-box {
+    background-color: white;
+    color: rgb(235, 139, 203);
+    max-width: 800px;
+    margin: 0 auto 40px auto; /* centered with spacing below */
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* --- Gallery container --- */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: white; /* white box for images */
+    padding: 20px;           /* space inside the box */
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.gallery-container img {
+    width: 100%;
+    border-radius: 15px;
+    border: 4px solid rgb(235, 139, 203);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* --- Pull Quote Styling --- */
+blockquote {
+    font-family: "Times New Roman", serif;
+    font-size: 1.8rem;
+    max-width: 700px;
+    margin: 60px auto;
+    text-align: center;
+    color: rgb(235, 139, 203);
+    font-style: italic;
+}
+
+/* --- Section Headings --- */
+.gallery-text-box h1,
+.gallery-text-box h2 {
+    font-family: "Arial Black", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: rgb(235, 139, 203);
+}
+
+/* --- Section Paragraphs --- */
+.gallery-text-box p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* --- Magazine Page Button --- */
+.magazine-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: rgb(235, 139, 203);
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.magazine-button:hover {
+    background-color: white;
+    color: rgb(235, 139, 203);
+    border: 2px solid rgb(235, 139, 203);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* --- Magazine Feature Section --- */
+.feature {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.feature.reverse {
+    flex-direction: row-reverse;
+}
+
+.feature img {
+    width: 50%;
+    border-radius: 15px;
+    border: 4px solid rgb(235, 139, 203);
+}
+
+.feature-text {
+    width: 50%;
+    text-align: left;
+}
+
+.feature-text h2 {
+    font-family: "Arial Black", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.feature-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .feature {
+        flex-direction: column;
+    }
+    .feature img,
+    .feature-text {
+        width: 100%;
+    }
+}
